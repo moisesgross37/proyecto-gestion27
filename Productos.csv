@@ -86,15 +86,19 @@ INVESTIDURA,Pequenines,COMBO NAVIDAD Y RECUERDO ESCOLAR,"Incluye: COMBO NAVIDAD:
 INVESTIDURA,Salones,Issffaa,Capacidad Aproximada 500,50000,total_grupo
 INVESTIDURA,Salones,Coopnama (u otro mismo rango),Capacidad Aproximada 350,30000,total_grupo
 INVESTIDURA,Salones,Salon Aida Porta Latin,Capacidad Aproximada 100,25000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional,Capacidad Aproximada 400,90000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama,Capacidad Aproximada 900,130000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional (5:00pm),Capacidad Aproximada 400,120000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional (1:00pm),Capacidad Aproximada 400,90000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional (9:00am),Capacidad Aproximada 400,60000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama (5:00pm),Capacidad Aproximada 900,130000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama (1:00pm),Capacidad Aproximada 900,90000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama (9:00am),Capacidad Aproximada 900,60000,total_grupo
 INVESTIDURA,Salones,Auditorio Casa San Pablo,Capacidad Aproximada 1100,140000,total_grupo
 INVESTIDURA,Salones,Salon Sambil,Capacidad Aproximada 1300,295000,total_grupo
 INVESTIDURA,Salones,Hotel Catalonia Ibizza 2do Nivel,,400000,total_grupo
 INVESTIDURA,Salones,Salon Restauracion MIDE,Capacidad Aproximada 500,200000,total_grupo
 INVESTIDURA,Salones,Salon Independencia MIDE,Capacidad Aproximada 1500,350000,total_grupo
-INVESTIDURA,Salones,En el Centro con Facilidades,,30000,total_grupo
-INVESTIDURA,Salones,En el Centro sin Facilidades,,40000,total_grupo
+INVESTIDURA,Salones,En el Centro con Facilidades,,40000,total_grupo
+INVESTIDURA,Salones,En el Centro sin Facilidades,,50000,total_grupo
 INVESTIDURA,Varios,Stand Personalizado,,20000,escalonado
 INVESTIDURA,Varios,Plataforma 360,,10000,escalonado
 INVESTIDURA,Varios,Esclavina Sublimada,,175,por_estudiante
