@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Comentarios - Admin</title>
+    <link rel="stylesheet" href="/admin-estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/admin_menu.html" class="back-button">&larr; Volver al Menú</a>
+            <h1>Gestión de Comentarios Predeterminados</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Añadir Comentario</h2>
+                <form id="add-comment-form" class="form-group">
+                    <label for="new-comment-name">Texto del Comentario:</label>
+                    <input type="text" id="new-comment-name" name="name" required placeholder="Escribe el comentario">
+                    <button type="submit" class="btn">Añadir Comentario</button>
+                </form>
+                <hr>
+                <h3>Comentarios Actuales</h3>
+                <ul id="comment-list" class="resource-list">
+                    <li>Cargando comentarios...</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // IDs correctos que coinciden con tu HTML
+            const form = document.getElementById('add-comment-form');
+            const input = document.getElementById('new-comment-name');
+            const list = document.getElementById('comment-list');
+            
+            // Función para cargar y mostrar los comentarios
+            const fetchAndDisplayComments = async () => {
+                try {
+                    const response = await fetch('/api/comments');
+                    if (!response.ok) throw new Error('Error del servidor al obtener comentarios.');
+                    const comments = await response.json();
+                    
+                    list.innerHTML = ''; // Limpiar la lista antes de llenarla
+                    if (comments.length === 0) {
+                        list.innerHTML = '<li>No hay comentarios predeterminados.</li>';
+                        return;
+                    }
+                    
+                    comments.forEach(comment => {
+                        const li = document.createElement('li');
+                        li.className = 'resource-list-item';
+                        li.innerHTML = `
+                            <span>${comment.text}</span>
+                            <button data-id="${comment.id}" class="btn-delete">Eliminar</button>
+                        `;
+                        list.appendChild(li);
+                    });
+                } catch (error) {
+                    list.innerHTML = `<li style="color: red;">${error.message}</li>`;
+                    console.error(error);
+                }
+            };
+
+            // Evento para añadir un nuevo comentario
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const text = input.value.trim();
+                if (!text) return;
+
+                try {
+                    const response = await fetch('/api/comments', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ text }) 
+                    });
+                    if (!response.ok) throw new Error('No se pudo añadir el comentario.');
+                    input.value = '';
+                    fetchAndDisplayComments();
+                } catch (error) {
+                    console.error("Error al añadir:", error);
+                    alert(error.message);
+                }
+            });
+
+            // Evento para eliminar un comentario
+            list.addEventListener('click', async (e) => {
+                if (e.target.classList.contains('btn-delete')) {
+                    const id = e.target.dataset.id;
+                    if (confirm('¿Estás seguro de que quieres eliminar este comentario?')) {
+                        try {
+                            const response = await fetch(`/api/comments/${id}`, { method: 'DELETE' });
+                            if (!response.ok) throw new Error('No se pudo eliminar el comentario.');
+                            fetchAndDisplayComments();
+                        } catch (error) {
+                            console.error("Error al eliminar:", error);
+                            alert(error.message);
+                        }
+                    }
+                }
+            });
+            
+            // Carga inicial de los comentarios
+            fetchAndDisplayComments();
+        });
+    </script>
+</body>
+</html>

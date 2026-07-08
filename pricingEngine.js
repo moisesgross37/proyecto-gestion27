@@ -1,0 +1,204 @@
+// VERSIÓN 14.0 - Lógica de Costos Progresivos para Lanzamientos
+
+function redondeoComercial(precio) {
+    const residuo = precio % 100;
+    if (residuo > 0 && residuo <= 15) {
+        return Math.floor(precio / 100) * 100;
+    }
+    return Math.ceil(precio / 50) * 50;
+}
+
+// --- TABLAS DE COSTOS POR TRAMOS ---
+
+const eventCostTiers = [
+    { min: 10, max: 25, cost: 1150 },
+    { min: 26, max: 50, cost: 1250 },
+    { min: 51, max: 75, cost: 950 },
+    { min: 76, max: 100, cost: 650 },
+    { min: 101, max: 125, cost: 550 },
+    { min: 126, max: 150, cost: 450 },  // Rango 150: Costo estable
+    { min: 151, max: 175, cost: 450 },  // MANTENEMOS el costo (antes bajaba)
+    { min: 176, max: 250, cost: 400 },  // Bajada muy suave
+    { min: 251, max: Infinity, cost: 400 } // Piso firme
+];
+
+const launchTiers = [
+    { min: 51, max: 75, cost: 450 },
+    { min: 76, max: 100, cost: 600 },
+    { min: 101, max: 125, cost: 750 },
+    { min: 126, max: 150, cost: 900 },
+    { min: 151, max: 175, cost: 900 },
+    { min: 176, max: 250, cost: 1050 },
+    { min: 251, max: Infinity, cost: 1200 }
+];
+
+// --- FUNCIONES AUXILIARES DE CÁLCULO ---
+
+const escalonadoCostIncreaseTiers = [
+    { min: 10, max: 25, increase: 0.00 },
+    { min: 26, max: 50, increase: 0.25 },
+    { min: 51, max: 75, increase: 0.35 },
+    { min: 76, max: 100, increase: 0.45 },
+    { min: 101, max: 125, increase: 0.55 },
+    { min: 126, max: 150, increase: 0.65 },
+    { min: 151, max: 175, increase: 0.75 },
+    { min: 176, max: 250, increase: 0.85 },
+    { min: 251, max: Infinity, increase: 0.95 }
+];
+
+function getEscalonadoIncrease(studentCount) {
+    const tier = escalonadoCostIncreaseTiers.find(t => studentCount >= t.min && studentCount <= t.max);
+    return tier ? tier.increase : 0;
+}
+
+function getEventCost(studentCount) {
+    const tier = eventCostTiers.find(t => studentCount >= t.min && studentCount <= t.max);
+    return tier ? tier.cost : 0;
+}
+
+function calculateLaunchExtraCost(studentCount) {
+    const startTier = 50; // El costo base cubre hasta 50 estudiantes
+    if (studentCount <= startTier) {
+        return 0;
+    }
+
+    let extraCost = 0;
+    let lastTierMax = startTier;
+
+    for (const tier of launchTiers) {
+        if (studentCount > lastTierMax) {
+            const studentsInTier = Math.min(studentCount, tier.max) - lastTierMax;
+            extraCost += studentsInTier * tier.cost;
+            lastTierMax = tier.max;
+        } else {
+            break; // Se detiene cuando el conteo de estudiantes ya no supera el tramo anterior
+        }
+    }
+    return extraCost;
+}
+
+// --- FUNCIÓN PRINCIPAL DEL MOTOR DE PRECIOS ---
+
+function assembleQuote(quoteInput, db, ajuste_aprobado_monto = 0) {
+    const {
+        studentCount = 0,
+        productIds = [],
+        aporteInstitucion = 0,
+        estudiantesCortesia = 0,
+        tasaDesercion = 0.10
+    } = quoteInput;
+
+    const allProducts = db.products || [];
+    const selectedProducts = productIds.map(id => allProducts.find(p => p.id === id)).filter(p => p);
+
+    if (studentCount <= 0 || selectedProducts.length === 0) {
+        return { error: 'Datos insuficientes para calcular.' };
+    }
+
+    let costoTotalProyecto = 0;
+    let isPerStudentQuote = false;
+
+    selectedProducts.forEach(product => {
+        const costoBaseText = product['COSTO BASE'] || '0';
+        const costoBase = parseFloat(costoBaseText.replace(/[^0-9.]/g, '')) || 0;
+        const tipoPrecio = (product['TIPO DE PRECIO'] || '').trim();
+        const productName = (product['PRODUCTO / SERVICIO'] || '').trim();
+
+        const isLaunchProduct = productName === 'LANZAMIENTOS' || productName === 'LANZAMIENTO TEMATICO';
+
+        if (isLaunchProduct) {
+            const extraCost = calculateLaunchExtraCost(studentCount);
+            costoTotalProyecto += costoBase + extraCost;
+            isPerStudentQuote = true; // El precio ahora varía por estudiante
+        }
+        // FIX: Usar startsWith para hacer la coincidencia de nombres más robusta contra caracteres invisibles/typos.
+        else if (productName.startsWith('Sesion de fotos en Estudio') || productName.startsWith('Sesion de fotos de Pre Graduacion')) {
+            costoTotalProyecto += costoBase * studentCount;
+            isPerStudentQuote = true;
+        }
+        else if (tipoPrecio === 'costo_por_rango') {
+            const eventCostPerStudent = getEventCost(studentCount);
+            costoTotalProyecto += eventCostPerStudent * studentCount;
+            isPerStudentQuote = true;
+        }
+        else if (tipoPrecio === 'por_estudiante') {
+            costoTotalProyecto += costoBase * studentCount;
+            isPerStudentQuote = true;
+        }
+        else if (tipoPrecio === 'escalonado') {
+            const increasePercentage = getEscalonadoIncrease(studentCount);
+            const increasedCost = costoBase * (1 + increasePercentage);
+            costoTotalProyecto += increasedCost;
+        }
+        else {
+            costoTotalProyecto += costoBase;
+        }
+    });
+
+   const perStudentMarginRules = [
+    { min: 10, max: 25, margin: 0.55 },
+    { min: 26, max: 50, margin: 0.45 },
+    { min: 51, max: 75, margin: 0.35 },
+    { min: 76, max: 100, margin: 0.30 },
+    { min: 101, max: 125, margin: 0.28 },
+    { min: 126, max: 150, margin: 0.28 }, // Rango 150: Margen fuerte (28%)
+    { min: 151, max: 175, margin: 0.28 }, // MANTENEMOS 28% (Evita caída de precio)
+    { min: 176, max: 250, margin: 0.27 }, // Solo bajamos un 1%
+    { min: 251, max: Infinity, margin: 0.27 } // Mantenemos firme
+];
+
+    const fixedCostMarginRules = [
+    { min: 10, max: 25, margin: 0.30 },
+    { min: 26, max: 50, margin: 0.29 },
+    { min: 51, max: 75, margin: 0.32 },
+    { min: 76, max: 100, margin: 0.26 },
+    { min: 101, max: 125, margin: 0.28 },
+    { min: 126, max: 150, margin: 0.28 }, // Rango 150: Margen fuerte (28%)
+    { min: 151, max: 175, margin: 0.28 }, // MANTENEMOS 28% (Evita caída de precio)
+    { min: 176, max: 250, margin: 0.27 }, // Solo bajamos un 1%
+    { min: 251, max: Infinity, margin: 0.27 } // Mantenemos firme
+];
+
+    const marginRules = isPerStudentQuote ? perStudentMarginRules : fixedCostMarginRules;
+    const applicableMarginRule = marginRules.find(r => studentCount >= r.min && studentCount <= r.max);
+    const beneficioNetoEmpresa = applicableMarginRule ? applicableMarginRule.margin : 0.30;
+    const comisionAsesorPercentageOfSale = 0.10;
+
+    let precioVentaTotalProyecto = costoTotalProyecto / (1 - beneficioNetoEmpresa - comisionAsesorPercentageOfSale);
+    if (aporteInstitucion > 0) {
+        precioVentaTotalProyecto += aporteInstitucion * studentCount;
+    }
+
+    const estudiantesParaFacturar = Math.floor(Math.max(0, (studentCount * (1 - tasaDesercion)) - estudiantesCortesia));
+    const precioFinalPorEstudiante = estudiantesParaFacturar > 0 ? precioVentaTotalProyecto / estudiantesParaFacturar : 0;
+    const precioRedondeado = redondeoComercial(precioFinalPorEstudiante);
+    // --- INICIO DEL NUEVO BLOQUE DE AJUSTE ---
+    let precioFinalAjustado = precioRedondeado;
+    if (ajuste_aprobado_monto !== 0) {
+        // Sumamos el ajuste (que puede ser positivo o negativo)
+        precioFinalAjustado += ajuste_aprobado_monto;
+    }
+    // --- FIN DEL NUEVO BLOQUE DE AJUSTE ---
+
+    const facilidades = [];
+    const hasPolo = selectedProducts.some(p => (p['PRODUCTO / SERVICIO'] || '').trim().startsWith('Polo'));
+    if (hasPolo && studentCount > 0) {
+        const freePolos = Math.floor(studentCount / 10);
+        if (freePolos > 0) {
+            facilidades.push(`${freePolos} polo(s) extra(s) de cortesía.`);
+        }
+    }
+
+    const result = {
+            calculatedPrices: [{
+                montoTotalProyecto: precioVentaTotalProyecto.toFixed(2),
+                precioFinalPorEstudiante: precioFinalAjustado.toFixed(2), // <-- CAMBIO AQUÍ
+                estudiantesFacturables: estudiantesParaFacturar
+        }],
+        facilidadesAplicadas: facilidades
+    };
+
+    return result;
+}
+
+module.exports = { assembleQuote };

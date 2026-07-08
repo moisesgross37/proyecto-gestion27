@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Visita</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos para que las sugerencias del autocompletado se vean bien */
+        .autocomplete-suggestions {
+            border: 1px solid #ccc; border-top: none;
+            max-height: 150px; overflow-y: auto;
+            position: absolute; background-color: white;
+            width: calc(100% - 2px); 
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .autocomplete-suggestions div { padding: 10px; cursor: pointer; }
+        .autocomplete-suggestions div:hover { background-color: #f0f0f0; }
+        .autocomplete-suggestions .suggestion-address {
+            font-size: 0.8em;
+            color: #555;
+            margin-top: 2px;
+        }
+        /* --- ESTILOS PARA LA SECCIÓN DE COTIZACIONES --- */
+        #formalize-quote-section {
+            background-color: #fffbe6;
+            border: 1px solid #ffe58f;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        #quote-list-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        #quote-list-container input {
+            margin-right: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/index.html" class="back-button">&larr; Volver al Menú</a>
+            <h1>Registro de Visita de Asesor</h1>
+        </header>
+
+        <form id="visit-form">
+            <div class="form-group">
+                <label for="advisor">Tu Nombre (Asesor):</label>
+                <select id="advisor" name="advisorName" required>
+                    <option value="">Selecciona tu nombre...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="visitDate">Fecha de Visita:</label>
+                <input type="date" id="visitDate" name="visitDate" required>
+            </div>
+            
+            <div class="form-group" style="position: relative;">
+                <label for="centerName">Nombre del Centro Educativo:</label>
+                <input type="text" id="centerName" name="centerName" required autocomplete="off" placeholder="Escribe para buscar...">
+                <div id="autocomplete-suggestions" class="autocomplete-suggestions" style="display: none;"></div>
+            </div>
+
+            <div class="form-group" style="display: none;">
+    <label for="centerAddress">Dirección Exacta:</label>
+    <input type="text" id="centerAddress" name="centerAddress"> 
+</div>
+
+<div class="form-group" style="display: none;">
+    <label for="centerSector">Sector o Barrio:</label>
+    <input type="text" id="centerSector" name="centerSector">
+</div>
+            <div class="form-group">
+                <label for="zone">Zona Geográfica (para reportes):</label>
+                <select id="zone" name="zone" required>
+                    <option value="">Selecciona una zona...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="coordinatorName">Nombre del Coordinador(a):</label>
+                <input type="text" id="coordinatorName" name="contactName" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinatorContact">Número de Contacto:</label>
+                <input type="tel" id="coordinatorContact" name="contactNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="comments"><strong>Motivo de la Visita / Etapa Actual:</strong></label>
+                <select id="comments" name="commentText" required>
+                    <option value="" disabled selected>Selecciona en qué etapa estás...</option>
+                    <option value="Visita Inicial">1. Visita Inicial (Exploración)</option>
+                    <option value="Presentacion de Propuesta a Direccion">2. Presentación a Dirección</option>
+                    <option value="Presentacion de Propuesta a Estudiantes">3. Presentación a Estudiantes</option>
+                    <option value="Visita de Seguimiento">4. Seguimiento / Negociación</option>
+                    <option value="Formalizar Acuerdo">✅ FORMALIZAR ACUERDO (Cierre)</option>
+                    <option value="Acordado seguimiento para el proximo ano">📅 Acordado seguimiento próx. año</option>
+                </select>
+            </div>
+
+            <!-- SECCIÓN AMARILLA: COTIZACIONES -->
+            <div id="formalize-quote-section" style="display: none;">
+                <label for="quote-list-container"><strong>Seleccione la Cotización a Formalizar:</strong></label>
+                <div id="quote-list-container"></div>
+            </div>
+
+            
+            
+            <button type="submit" class="btn">Registrar Visita</button>
+        </form>
+    </div>
+
+    <script src="registrar_visita.js"></script>
+</body>
+</html>

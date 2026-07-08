@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobación de Cotizaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="admin-estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Aprobación de Cotizaciones</h1>
+            <p>Revisa, aprueba o rechaza las cotizaciones pendientes.</p>
+            <a href="/asesores-menu.html" class="back-button">&larr; Volver al Menú de Asesor</a>
+        </header>
+
+        <main>
+            <!-- ============================================== -->
+            <!-- INICIO: FILTRO AÑADIDO (PASO 1 DEL PARCHE) -->
+            <!-- ============================================== -->
+            <div id="filter-container" style="display: none; margin-bottom: 25px; margin-top: 15px; padding: 15px; background-color: #f9f9f9; border-radius: 8px;">
+                <label for="advisor-filter" style="display: block; margin-bottom: 8px; font-weight: 500;">Filtrar por Asesor:</label>
+                <select id="advisor-filter" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <!-- Las opciones se cargarán con JavaScript -->
+                </select>
+            </div>
+            <!-- ============================================== -->
+            <!-- FIN: FILTRO AÑADIDO -->
+            <!-- ============================================== -->
+
+            <h2>Cotizaciones Pendientes de Descarga</h2>
+            <table class="centers-table">
+                <thead>
+                    <tr>
+                        <th>No. Cotización</th>
+                        <th>Fecha de Solicitud</th>
+                        <th>Cliente</th>
+                        <th>Asesor</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="pending-quotes-table-body">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+
+            <hr style="margin: 40px 0;">
+
+            <h2>Historial de Cotizaciones Finalizadas</h2>
+            <table class="centers-table">
+                <thead>
+                    <tr>
+                        <th># Cotización</th>
+                        <th>Cliente</th>
+                        <th>Evento</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="finalized-quotes-table-body">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- (El resto del archivo no cambia: modales de rechazo y ajuste) -->
+    
+    <div id="rejected-quote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-rejected-modal-btn">&times;</span>
+            <h2>Detalles del Rechazo</h2>
+            
+            <div class="rejection-reason-box">
+                <h4>Motivo del Rechazo:</h4>
+                <p id="rejection-reason-text"></p>
+            </div>
+
+            <div class="quote-summary">
+                <h4>Resumen de la Cotización Rechazada:</h4>
+                <span id="rejected-quote-number"></span>
+                <ul id="rejected-quote-products">
+                    <!-- Productos generados por JS -->
+                </ul>
+                <div id="rejected-quote-summary-details">
+                    <!-- Detalles generados por JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="request-adjustment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-adjustment-modal">&times;</span>
+            <h2>Solicitar Ajuste de Precio</h2>
+            <p>Cotización: <strong id="adjustment-quote-number"></strong></p>
+            <form id="adjustment-form">
+                <input type="hidden" id="adjustment-quote-id">
+                <div class="form-group">
+                    <label for="adjustment-amount">Monto del Ajuste (por estudiante):</label>
+                    <input type="number" id="adjustment-amount" step="0.01" required placeholder="Ej: -20 para descuento">
+                </div>
+                <div class="form-group">
+                    <label for="adjustment-comment">Justificación detallada:</label>
+                    <textarea id="adjustment-comment" rows="4" required placeholder="Explica por qué es necesario este ajuste..."></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+    <script src="aprobacion.js"></script>
+</body>
+</html>
