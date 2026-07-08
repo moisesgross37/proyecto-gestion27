@@ -12,9 +12,11 @@ PROMOCIONALES,Polo para Maestros,Polo para Maestros Algondo Combinado + Logo Bor
 PROMOCIONALES,Hoodies,Hoodies Sublimado,,760,por_estudiante
 PROMOCIONALES,Hoodies,Hoodies Tela Mono,,1000,por_estudiante
 PROMOCIONALES,Hoodies,Hoodies Combinado,Incluye Aplique Espalda,1200,por_estudiante
+PROMOCIONALES,Hoodies,Hoodies Especial,Incluye Aplique Espalda,2500,por_estudiante
 PROMOCIONALES,Varsity,Varsity - Chaqueta Sublimado,,820,por_estudiante
 PROMOCIONALES,Varsity,Varsity - Chaqueta Tela Mono,,1040,por_estudiante
 PROMOCIONALES,Varsity,Varsity - Chaqueta Combinado,Incluye Aplique Espalda,1244,por_estudiante
+PROMOCIONALES,Varsity,Varsity - Chaqueta Especial,Incluye Aplique Espalda,2500,por_estudiante
 PROMOCIONALES,Gorras,Gorras Estandar,,110,por_estudiante
 PROMOCIONALES,Gorras,Gorras Premium,,460,por_estudiante
 PROMOCIONALES,Otros,Chalecos en Gabardina,,500,por_estudiante
@@ -28,9 +30,6 @@ PROMOCIONALES,Otros,Termos Sublimados,,140,por_estudiante
 PROMOCIONALES,Otros,Llaveros Sublimados,,50,por_estudiante
 PROMOCIONALES,Otros,Llaveros Fotos,,50,por_estudiante
 PROMOCIONALES,Otros,Botones Promocional,,50,por_estudiante
-PROMOCIONALES,Combo Promocional,Polo + Gorra,"Incluye: Polo Sublimado, Gorra Logo Bordado, Termo Sublimado, Banderola",998,por_estudiante
-PROMOCIONALES,Combo Promocional,Polo + Hoodies + Gorra,"Incluye: Polo Sublimado, Hoodies Sublimado, Gorra Logo Bordado, Termo Sublimado, Banderola",1668,por_estudiante
-PROMOCIONALES,Combo Promocional,Polo + Hoodies + Gorra + Amenidades,"Incluye: Polo Sublimado, Hoodies Sublimado, Gorra Logo Bordado, Banderola, Amenidades (no lanzamiento) incluye:Sonido Estándar y Técnico, DJ // Animación, Cuadro de Truss con Banner de fondo, Stand para fotos con banner, Fotógrafo y Resumen de fotos, Luces para Ambientacion, Confetti, grupo mayor a 40 estudiantes",2000,por_estudiante
 PROMOCIONALES,Gratuidades,Botones promocionales Gratis,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Llaveros Sublimables Gratis,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Termos Sublimados Gratis,,100,por_estudiante
@@ -46,7 +45,7 @@ PROMOCIONALES,Varios,Extra Polos Sublimados,,600,por_estudiante
 PROMOCIONALES,Varios,Extra Polos Sublimados logo Bordados,,710,por_estudiante
 PROMOCIONALES,Varios,Extra Polos Algodon Combinando,,800,por_estudiante
 PROMOCIONALES,Varios,Aplicacion de Sublimacion,,100,por_estudiante
-LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTOS PRIMIUM,"Incluye: Tarima, Cuadro de Truss con Banner de fondo Personalizado, Stand para fotos con banner de Fondo Personalizado, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Luces para Ambientacion, Confetti",95000,total_grupo
+LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTOS PRIMIUM,"Incluye: Tarima, Cuadro de Truss con Banner de fondo Personalizado, Stand para fotos con banner de Fondo Personalizado, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Luces para Ambientacion, Confetti",130000,total_grupo
 LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO,"Incluye: Decoración Temática , Fondos para Decoracion (1), Estructuras para Decoracion (1), Elementos para Decoración, Luces para Ambientacion, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Filmaker, Confetti",160000,total_grupo
 LANZAMIENTOS,Varios ,Fondo de decoracion Personalizado ,,20000,escalonado
 LANZAMIENTOS,Varios,Cuadro en Truss,Incluye Banner personalizado,10000,escalonado
