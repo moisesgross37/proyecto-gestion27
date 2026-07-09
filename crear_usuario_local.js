@@ -15,8 +15,9 @@ async function configurarUsuarios() {
     console.log("Esto es solo para pruebas locales. No subir a producción.");
     console.log("=======================================================");
     const pool = new Pool({
-        connectionString: "postgresql://moisesgross:admin123@localhost:5432/gestion_db",
-    });
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+});
     // --- FIN DE MODIFICACIÓN TEMPORAL ---
 
     const client = await pool.connect();
