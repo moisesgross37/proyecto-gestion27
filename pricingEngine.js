@@ -136,28 +136,28 @@ function assembleQuote(quoteInput, db, ajuste_aprobado_monto = 0) {
     });
 
    const perStudentMarginRules = [
-    { min: 10, max: 25, margin: 0.55 },
-    { min: 26, max: 50, margin: 0.45 },
-    { min: 51, max: 75, margin: 0.35 },
-    { min: 76, max: 100, margin: 0.30 },
-    { min: 101, max: 125, margin: 0.28 },
-    { min: 126, max: 150, margin: 0.28 }, // Rango 150: Margen fuerte (28%)
-    { min: 151, max: 175, margin: 0.28 }, // MANTENEMOS 28% (Evita caída de precio)
-    { min: 176, max: 250, margin: 0.27 }, // Solo bajamos un 1%
-    { min: 251, max: Infinity, margin: 0.27 } // Mantenemos firme
-];
+        { min: 10, max: 25, margin: 0.40 }, // Empresa: 40% (Fuerte ganancia por el esfuerzo)
+        { min: 26, max: 50, margin: 0.35 }, 
+        { min: 51, max: 75, margin: 0.30 }, // Empresa: 30% (El objetivo ideal)
+        { min: 76, max: 100, margin: 0.28 },
+        { min: 101, max: 125, margin: 0.26 },
+        { min: 126, max: 150, margin: 0.25 }, 
+        { min: 151, max: 175, margin: 0.24 }, 
+        { min: 176, max: 250, margin: 0.23 }, 
+        { min: 251, max: Infinity, margin: 0.22 } // Empresa: 22% (Precio competitivo en gran volumen)
+    ];
 
     const fixedCostMarginRules = [
-    { min: 10, max: 25, margin: 0.30 },
-    { min: 26, max: 50, margin: 0.29 },
-    { min: 51, max: 75, margin: 0.32 },
-    { min: 76, max: 100, margin: 0.26 },
-    { min: 101, max: 125, margin: 0.28 },
-    { min: 126, max: 150, margin: 0.28 }, // Rango 150: Margen fuerte (28%)
-    { min: 151, max: 175, margin: 0.28 }, // MANTENEMOS 28% (Evita caída de precio)
-    { min: 176, max: 250, margin: 0.27 }, // Solo bajamos un 1%
-    { min: 251, max: Infinity, margin: 0.27 } // Mantenemos firme
-];
+        { min: 10, max: 25, margin: 0.40 }, 
+        { min: 26, max: 50, margin: 0.35 },
+        { min: 51, max: 75, margin: 0.30 }, 
+        { min: 76, max: 100, margin: 0.28 },
+        { min: 101, max: 125, margin: 0.26 },
+        { min: 126, max: 150, margin: 0.25 }, 
+        { min: 151, max: 175, margin: 0.24 }, 
+        { min: 176, max: 250, margin: 0.23 }, 
+        { min: 251, max: Infinity, margin: 0.22 } 
+    ];
 
     const marginRules = isPerStudentQuote ? perStudentMarginRules : fixedCostMarginRules;
     const applicableMarginRule = marginRules.find(r => studentCount >= r.min && studentCount <= r.max);
