@@ -48,7 +48,7 @@ PROMOCIONALES,Varios,Aplicacion de Sublimacion,,100,por_estudiante
 LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTOS PRIMIUM,"Incluye: Tarima, Cuadro de Truss con Banner de fondo Personalizado, Stand para fotos con banner de Fondo Personalizado, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Luces para Ambientacion, Confetti",130000,total_grupo
 LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO,"Incluye: Decoración Temática , Fondos para Decoracion (1), Estructuras para Decoracion (1), Elementos para Decoración, Luces para Ambientacion, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Filmaker, Confetti",160000,total_grupo
 LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO (lista),"Incluye: Decoración Temática , Fondos para Decoracion (1), Estructuras para Decoracion (1), Elementos para Decoración, Luces para Ambientacion, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Filmaker, Confetti",110000,total_grupo
-LANZAMIENTOS,Varios ,Fondo de decoracion Personalizado ,,20000,escalonado
+LANZAMIENTOS,Varios,Fondo de decoracion Personalizado ,,20000,escalonado
 LANZAMIENTOS,Varios,Cuadro en Truss,Incluye Banner personalizado,10000,escalonado
 LANZAMIENTOS,Varios,Tarima,16x16 - 16x20 - 20x20,20000,escalonado
 LANZAMIENTOS,Varios,Techo,16x16 - 16x20 - 20x20,30000,escalonado
@@ -84,22 +84,22 @@ INVESTIDURA,Pequenines,Recuerdo Escolar,"Incluye:1 Fotografía enmarcada 8x10, 1
 INVESTIDURA,Pequenines,COMBO NAVIDAD,"Incluye: Ambientacion del espacio de trabajo, Fotografo y Staff, 1 Fotografía familiar tamaño 08x10 enmarcada, 1 Taza Sublimada con foto familiar, 2 Llaveros con foto familiar,Fotografías digitales",900,por_estudiante
 INVESTIDURA,Pequenines,COMBO NAVIDAD Y RECUERDO ESCOLAR,"Incluye: COMBO NAVIDAD: Ambientacion del espacio de trabajo, Fotografo y Staff, 1 Fotografía familiar tamaño 08x10 enmarcada, 1 Taza Sublimada con foto familiar, 2 Llaveros con foto familiar,Fotografías digitales, RECUERDO ESCOLAR: Incluye:1 Fotografía enmarcada 8x10, 1 Fotografía tamaño 5x7 en portaretrato, 9 fotos tipos cartera, Fotografías cargadas a la web,",1600,por_estudiante
 INVESTIDURA,Salones,Issffaa,Capacidad Aproximada 500,50000,total_grupo
-INVESTIDURA,Salones,Auditorio UNPHU,Capacidad Aproximada 400,100000,total_grupo
-INVESTIDURA,Salones,Coopnama (u otro mismo rango),Capacidad Aproximada 350,30000,total_grupo
-INVESTIDURA,Salones,Salon Aida Porta Latin,Capacidad Aproximada 100,25000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (5:00pm),Capacidad Aproximada 400,80000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (1:00pm),Capacidad Aproximada 400,60000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (9:00am),Capacidad Aproximada 400,40000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (5:00pm),Capacidad Aproximada 900,130000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (1:00pm),Capacidad Aproximada 900,90000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (9:00am),Capacidad Aproximada 900,60000,total_grupo
-INVESTIDURA,Salones,Auditorio Casa San Pablo,Capacidad Aproximada 1100,120000,total_grupo
-INVESTIDURA,Salones,Salon Sambil,Capacidad Aproximada 1300,295000,total_grupo
+INVESTIDURA,Salones,Auditorio UNPHU(400),Capacidad Aproximada 400,100000,total_grupo
+INVESTIDURA,Salones,Coopnama(350) (u otro mismo rango),Capacidad Aproximada 350,30000,total_grupo
+INVESTIDURA,Salones,Salon Aida Porta Latin(100),Capacidad Aproximada 100,25000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (5:00pm),Capacidad Aproximada 400,80000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (1:00pm),Capacidad Aproximada 400,60000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (9:00am),Capacidad Aproximada 400,40000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (5:00pm),Capacidad Aproximada 900,130000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (1:00pm),Capacidad Aproximada 900,90000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (9:00am),Capacidad Aproximada 900,60000,total_grupo
+INVESTIDURA,Salones,Auditorio Casa San Pablo(1100),Capacidad Aproximada 1100,120000,total_grupo
+INVESTIDURA,Salones,Salon Sambil(1300),Capacidad Aproximada 1300,295000,total_grupo
 INVESTIDURA,Salones,Hotel Catalonia Ibizza 2do Nivel,,400000,total_grupo
-INVESTIDURA,Salones,Salon Restauracion MIDE,Capacidad Aproximada 500,200000,total_grupo
-INVESTIDURA,Salones,Salon Independencia MIDE,Capacidad Aproximada 1500,350000,total_grupo
-INVESTIDURA,Salones,En el Centro con Facilidades,,40000,total_grupo
-INVESTIDURA,Salones,En el Centro sin Facilidades,,50000,total_grupo
+INVESTIDURA,Salones,Salon Restauracion MIDE(500),Capacidad Aproximada 500,200000,total_grupo
+INVESTIDURA,Salones,Salon Independencia MIDE(1500),Capacidad Aproximada 1500,350000,total_grupo
+INVESTIDURA,Salones,En el Centro con Facilidades,,50000,total_grupo
+INVESTIDURA,Salones,En el Centro sin Facilidades,,60000,total_grupo
 INVESTIDURA,Varios,Stand Personalizado,,20000,escalonado
 INVESTIDURA,Varios,Plataforma 360,,10000,escalonado
 INVESTIDURA,Varios,Esclavina Sublimada,,175,por_estudiante
