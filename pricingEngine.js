@@ -8,20 +8,18 @@ function redondeoComercial(precio) {
     return Math.ceil(precio / 50) * 50;
 }
 
-// --- TABLAS DE COSTOS POR TRAMOS ---
-
+// --- TABLAS DE COSTOS POR TRAMOS (Calibración Fina) ---
 const eventCostTiers = [
-    { min: 10, max: 25, cost: 1800 },  // Subimos para penalizar sutilmente a grupos muy pequeños
-    { min: 26, max: 50, cost: 1600 },
-    { min: 51, max: 75, cost: 1550 },  // Antes 950 (Ajuste para acercar el precio a 7,500)
-    { min: 76, max: 100, cost: 1250 }, // Antes 650 (Ajuste para acercar el precio a 7,500)
-    { min: 101, max: 125, cost: 1050 }, // Transición suave para grupos más grandes
-    { min: 126, max: 150, cost: 850 },  
-    { min: 151, max: 175, cost: 700 },  
-    { min: 176, max: 250, cost: 600 },  
-    { min: 251, max: Infinity, cost: 500 } 
+    { min: 10, max: 25, cost: 1600 }, 
+    { min: 26, max: 50, cost: 1400 },
+    { min: 51, max: 75, cost: 1050 }, // AJUSTADO: Bajamos de 1550 a 1050 para evitar los $9,100
+    { min: 76, max: 100, cost: 850 },  // AJUSTADO: Bajamos para que se mantenga cerca de los 7,500
+    { min: 101, max: 125, cost: 700 }, 
+    { min: 126, max: 150, cost: 600 },  
+    { min: 151, max: 175, cost: 500 },  
+    { min: 176, max: 250, cost: 450 },  
+    { min: 251, max: Infinity, cost: 400 } 
 ];
-
 
 const launchTiers = [
     { min: 51, max: 75, cost: 450 },
