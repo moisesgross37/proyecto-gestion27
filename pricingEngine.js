@@ -8,18 +8,18 @@ function redondeoComercial(precio) {
     return Math.ceil(precio / 50) * 50;
 }
 
-// --- TABLAS DE COSTOS POR TRAMOS (Calibración Fina) ---
 const eventCostTiers = [
     { min: 10, max: 25, cost: 1600 }, 
     { min: 26, max: 50, cost: 1400 },
-    { min: 51, max: 75, cost: 1050 }, // AJUSTADO: Bajamos de 1550 a 1050 para evitar los $9,100
-    { min: 76, max: 100, cost: 850 },  // AJUSTADO: Bajamos para que se mantenga cerca de los 7,500
-    { min: 101, max: 125, cost: 700 }, 
-    { min: 126, max: 150, cost: 600 },  
-    { min: 151, max: 175, cost: 500 },  
-    { min: 176, max: 250, cost: 450 },  
-    { min: 251, max: Infinity, cost: 400 } 
+    { min: 51, max: 75, cost: 1000 },  // El punto dulce para 70 est.
+    { min: 76, max: 100, cost: 1000 }, // El punto dulce para 90 est.
+    { min: 101, max: 125, cost: 900 }, 
+    { min: 126, max: 150, cost: 800 },  
+    { min: 151, max: 175, cost: 700 },  
+    { min: 176, max: 250, cost: 600 },  
+    { min: 251, max: Infinity, cost: 500 } 
 ];
+
 
 const launchTiers = [
     { min: 51, max: 75, cost: 450 },
@@ -135,29 +135,29 @@ function assembleQuote(quoteInput, db, ajuste_aprobado_monto = 0) {
     });
 
    const perStudentMarginRules = [
-        { min: 10, max: 25, margin: 0.40 }, // Empresa: 40% (Fuerte ganancia por el esfuerzo)
-        { min: 26, max: 50, margin: 0.35 }, 
-        { min: 51, max: 75, margin: 0.30 }, // Empresa: 30% (El objetivo ideal)
-        { min: 76, max: 100, margin: 0.28 },
-        { min: 101, max: 125, margin: 0.26 },
-        { min: 126, max: 150, margin: 0.25 }, 
-        { min: 151, max: 175, margin: 0.24 }, 
-        { min: 176, max: 250, margin: 0.23 }, 
-        { min: 251, max: Infinity, margin: 0.22 } // Empresa: 22% (Precio competitivo en gran volumen)
+        { min: 10, max: 25, margin: 0.40 }, 
+        { min: 26, max: 50, margin: 0.35 },
+        { min: 51, max: 75, margin: 0.28 }, // 28% para frenar el precio en grupos de 70
+        { min: 76, max: 100, margin: 0.30 }, // 30% para ayudar a sostener el precio en grupos de 90
+        { min: 101, max: 125, margin: 0.27 },
+        { min: 126, max: 150, margin: 0.26 }, 
+        { min: 151, max: 175, margin: 0.25 }, 
+        { min: 176, max: 250, margin: 0.24 }, 
+        { min: 251, max: Infinity, margin: 0.23 } 
     ];
 
     const fixedCostMarginRules = [
+        // (Copias exactamente los mismos % de arriba para que ambas queden idénticas)
         { min: 10, max: 25, margin: 0.40 }, 
         { min: 26, max: 50, margin: 0.35 },
-        { min: 51, max: 75, margin: 0.30 }, 
-        { min: 76, max: 100, margin: 0.28 },
-        { min: 101, max: 125, margin: 0.26 },
-        { min: 126, max: 150, margin: 0.25 }, 
-        { min: 151, max: 175, margin: 0.24 }, 
-        { min: 176, max: 250, margin: 0.23 }, 
-        { min: 251, max: Infinity, margin: 0.22 } 
+        { min: 51, max: 75, margin: 0.28 }, 
+        { min: 76, max: 100, margin: 0.30 }, 
+        { min: 101, max: 125, margin: 0.27 },
+        { min: 126, max: 150, margin: 0.26 }, 
+        { min: 151, max: 175, margin: 0.25 }, 
+        { min: 176, max: 250, margin: 0.24 }, 
+        { min: 251, max: Infinity, margin: 0.23 } 
     ];
-
     const marginRules = isPerStudentQuote ? perStudentMarginRules : fixedCostMarginRules;
     const applicableMarginRule = marginRules.find(r => studentCount >= r.min && studentCount <= r.max);
     const beneficioNetoEmpresa = applicableMarginRule ? applicableMarginRule.margin : 0.30;
