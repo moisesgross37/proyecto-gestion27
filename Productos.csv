@@ -25,14 +25,14 @@ PROMOCIONALES,Otros,Camisa Manga Larga,,1050,por_estudiante
 PROMOCIONALES,Otros,Pantalones Deportivos,,400,por_estudiante
 PROMOCIONALES,Otros,Pantalones Confeccionados,,650,por_estudiante
 PROMOCIONALES,Otros,Pantalones tipo Cargo Confeccionados,,1035,por_estudiante
-PROMOCIONALES,Otros,Toallitas Bordadas,,160,por_estudiante
-PROMOCIONALES,Otros,Termos Sublimados,,140,por_estudiante
+PROMOCIONALES,Otros,Toallitas Bordadas,,140,por_estudiante
+PROMOCIONALES,Otros,Termos Sublimados,,170,por_estudiante
 PROMOCIONALES,Otros,Llaveros Sublimados,,50,por_estudiante
 PROMOCIONALES,Otros,Llaveros Fotos,,50,por_estudiante
 PROMOCIONALES,Otros,Botones Promocional,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Botones promocionales Gratis,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Llaveros Sublimables Gratis,,50,por_estudiante
-PROMOCIONALES,Gratuidades,Termos Sublimados Gratis,,100,por_estudiante
+PROMOCIONALES,Gratuidades,Termos Sublimados Gratis(no usar),,170,por_estudiante
 PROMOCIONALES,Gratuidades,Banderola Gratis,,50,por_estudiante
 PROMOCIONALES,Varios,Llaveros Sublimables,,50,por_estudiante
 PROMOCIONALES,Varios,LLaveros porta con fotos,,50,por_estudiante
@@ -123,3 +123,4 @@ INVESTIDURA,Salones,Auditorio PN(400),Capacidad Aproximada 400,90000,total_grupo
 INVESTIDURA,Salones,Auditorio Dominico Americano(350),Capacidad Aproximada 400,95000,total_grupo
 PROMOCIONALES,Otros,Accesorio de Cuello, Corbata o Corbatin,115,por_estudiante
 PROMOCIONALES,Combo,Combo Chaleco,"Incluye: Chaleco, pantalon, camisa, corbata",2200,por_estudiante
+PROMOCIONALES,Gratuidades,Toallitas Bordadas Gratis,,130,por_estudiante
