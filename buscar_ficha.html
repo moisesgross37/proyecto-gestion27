@@ -181,14 +181,36 @@
         </div>
 
                     <div class="form-group">
-                        <label for="comentarios">Comentarios / Notas Especiales:</label>
-                        <textarea id="comentarios" name="comentarios_destacados" rows="3" placeholder="Ej: No permiten fotos con flash, usar luces led..."></textarea>
-                    </div>
+    <label for="comentarios">Comentarios / Notas Especiales:</label>
+    <textarea id="comentarios" name="comentarios_destacados" rows="3" placeholder="Ej: No permiten fotos con flash, usar luces led..."></textarea>
+</div>
 
-                    <button type="submit" class="btn" style="background-color: #28a745; width: 100%; font-size: 1.1em;">💾 Guardar / Actualizar Ficha</button>
-                    <button type="button" onclick="window.print()" class="btn" style="background-color: #6c757d; width: 100%; margin-top: 10px; font-size: 1.1em;">🖨️ Imprimir Ficha Técnica</button>
-                </div>
-            </form>
+<!-- ========================================= -->
+<!-- NUEVO APARTADO: FIDELIZACIÓN (Para Regalos) -->
+<!-- ========================================= -->
+<div class="card mt-4 mb-4" style="background-color: #fff8e1; border: 1px solid #ffe082; border-radius: 8px;">
+    <div class="card-header" style="background-color: #ffecb3; font-weight: bold; color: #795548; padding: 10px; border-bottom: 1px solid #ffe082; border-radius: 8px 8px 0 0;">
+        🎁 Fidelización (Directivo)
+    </div>
+    <div class="card-body" style="padding: 15px;">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label style="font-weight: 500; display: block; margin-bottom: 5px;">Nombre del Directivo:</label>
+                <input type="text" class="form-control" name="director_nombre" id="directorNombre" placeholder="Ej: Lic. María Pérez" style="width: 100%;">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label style="font-weight: 500; display: block; margin-bottom: 5px;">Fecha de Cumpleaños:</label>
+                <input type="date" class="form-control" name="director_cumpleanos" id="directorCumpleanos" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========================================= -->
+
+<button type="submit" class="btn" style="background-color: #28a745; width: 100%; font-size: 1.1em;">💾 Guardar / Actualizar Ficha</button>
+<button type="button" onclick="window.print()" class="btn" style="background-color: #6c757d; width: 100%; margin-top: 10px; font-size: 1.1em;">🖨️ Imprimir Ficha Técnica</button>
+</div>
+</form>
         </div>
     </div>
 

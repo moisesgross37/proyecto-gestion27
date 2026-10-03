@@ -166,6 +166,9 @@ if (data.pistas_himnos_url && data.pistas_himnos_url.trim() !== '' && data.pista
             // document.getElementById('listadoUrl').value = data.listado_estudiantes_url || '';
             // document.getElementById('pistasUrl').value = data.pistas_himnos_url || '';
             document.getElementById('comentarios').value = data.comentarios_destacados || '';
+            // Cargar datos del Directivo
+document.getElementById('directorNombre').value = data.director_nombre || '';
+document.getElementById('directorCumpleanos').value = data.director_cumpleanos ? data.director_cumpleanos.split('T')[0] : '';
 
             // Mostrar todo el bloque
             fichaContainer.style.display = 'block';
