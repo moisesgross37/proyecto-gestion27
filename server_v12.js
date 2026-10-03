@@ -1321,8 +1321,8 @@ app.post('/api/ficha-tecnica', async (req, res) => {
                 nombre_centro, es_centro_nuevo, logo_url, color_toga, color_esclavina,
                 ubicacion_url, estudiante_nombre, estudiante_contacto, formulario_url,
                 listado_estudiantes_url, pistas_himnos_url, comentarios_destacados, 
-                enlaces_archivos, ultima_actualizacion
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, CURRENT_TIMESTAMP)
+                enlaces_archivos, director_nombre, director_cumpleanos, ultima_actualizacion
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, CURRENT_TIMESTAMP)
             ON CONFLICT (nombre_centro) DO UPDATE SET
                 es_centro_nuevo = EXCLUDED.es_centro_nuevo,
                 logo_url = EXCLUDED.logo_url,
@@ -1336,6 +1336,8 @@ app.post('/api/ficha-tecnica', async (req, res) => {
                 pistas_himnos_url = EXCLUDED.pistas_himnos_url,
                 comentarios_destacados = EXCLUDED.comentarios_destacados,
                 enlaces_archivos = EXCLUDED.enlaces_archivos,
+                director_nombre = EXCLUDED.director_nombre,
+                director_cumpleanos = EXCLUDED.director_cumpleanos,
                 ultima_actualizacion = CURRENT_TIMESTAMP;
         `;
 
@@ -1343,7 +1345,9 @@ app.post('/api/ficha-tecnica', async (req, res) => {
             d.nombre_centro, d.es_centro_nuevo, d.logo_url, d.color_toga, d.color_esclavina,
             d.ubicacion_url, d.estudiante_nombre, d.estudiante_contacto, d.formulario_url,
             d.listado_estudiantes_url, d.pistas_himnos_url, d.comentarios_destacados,
-            JSON.stringify(d.enlaces_archivos || []) 
+            JSON.stringify(d.enlaces_archivos || []),
+            d.director_nombre || null,          // Evita guardar variables indefinidas
+            d.director_cumpleanos || null       // Evita que PostgreSQL choque si dejan la fecha vacía
         ];
 
         await pool.query(query, values);
