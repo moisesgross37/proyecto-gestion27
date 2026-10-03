@@ -19,25 +19,25 @@ PROMOCIONALES,Varsity,Varsity - Chaqueta Combinado,Incluye Aplique Espalda,1244,
 PROMOCIONALES,Varsity,Varsity - Chaqueta Especial,Incluye Aplique Espalda,2500,por_estudiante
 PROMOCIONALES,Gorras,Gorras Estandar,,110,por_estudiante
 PROMOCIONALES,Gorras,Gorras Premium,,460,por_estudiante
-PROMOCIONALES,Otros,Chalecos en Gabardina,,500,por_estudiante
-PROMOCIONALES,Otros,Camisa Manga Corta,,600,por_estudiante
-PROMOCIONALES,Otros,Camisa Manga Larga,,900,por_estudiante
+PROMOCIONALES,Otros,Chaleco Forrado,,850,por_estudiante
+PROMOCIONALES,Otros,Camisa Manga Corta,,705,por_estudiante
+PROMOCIONALES,Otros,Camisa Manga Larga,,1050,por_estudiante
 PROMOCIONALES,Otros,Pantalones Deportivos,,400,por_estudiante
-PROMOCIONALES,Otros,Pantalones Confeccionados,,700,por_estudiante
+PROMOCIONALES,Otros,Pantalones Confeccionados,,650,por_estudiante
 PROMOCIONALES,Otros,Pantalones tipo Cargo Confeccionados,,1035,por_estudiante
-PROMOCIONALES,Otros,Toallitas Bordadas,,160,por_estudiante
-PROMOCIONALES,Otros,Termos Sublimados,,140,por_estudiante
+PROMOCIONALES,Otros,Toallitas Bordadas,,140,por_estudiante
+PROMOCIONALES,Otros,Termos (estilo botella) Sublimados,,170,por_estudiante
 PROMOCIONALES,Otros,Llaveros Sublimados,,50,por_estudiante
 PROMOCIONALES,Otros,Llaveros Fotos,,50,por_estudiante
 PROMOCIONALES,Otros,Botones Promocional,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Botones promocionales Gratis,,50,por_estudiante
 PROMOCIONALES,Gratuidades,Llaveros Sublimables Gratis,,50,por_estudiante
-PROMOCIONALES,Gratuidades,Termos Sublimados Gratis,,100,por_estudiante
+PROMOCIONALES,Gratuidades,Termos Sublimados Gratis(no usar),,170,por_estudiante
 PROMOCIONALES,Gratuidades,Banderola Gratis,,50,por_estudiante
 PROMOCIONALES,Varios,Llaveros Sublimables,,50,por_estudiante
 PROMOCIONALES,Varios,LLaveros porta con fotos,,50,por_estudiante
 PROMOCIONALES,Varios,Botones Promocional,,50,por_estudiante
-PROMOCIONALES,Varios,Termos sublimados,,140,por_estudiante
+PROMOCIONALES,Varios,Termos (estilo botella) sublimados,,170,por_estudiante
 PROMOCIONALES,Varios,Toallitas Bordadas,,88,por_estudiante
 PROMOCIONALES,Varios,Bordado Extra Normal,,100,por_estudiante
 PROMOCIONALES,Varios,Aplique extra,,150,por_estudiante
@@ -45,10 +45,14 @@ PROMOCIONALES,Varios,Extra Polos Sublimados,,600,por_estudiante
 PROMOCIONALES,Varios,Extra Polos Sublimados logo Bordados,,710,por_estudiante
 PROMOCIONALES,Varios,Extra Polos Algodon Combinando,,800,por_estudiante
 PROMOCIONALES,Varios,Aplicacion de Sublimacion,,100,por_estudiante
-LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTOS PRIMIUM,"Incluye: Tarima, Cuadro de Truss con Banner de fondo Personalizado, Stand para fotos con banner de Fondo Personalizado, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Luces para Ambientacion, Confetti",130000,total_grupo
-LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO,"Incluye: Decoración Temática , Fondos para Decoracion (1), Estructuras para Decoracion (1), Elementos para Decoración, Luces para Ambientacion, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Filmaker, Confetti",160000,total_grupo
-LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO (lista),"Incluye: Decoración Temática , Fondos para Decoracion (1), Estructuras para Decoracion (1), Elementos para Decoración, Luces para Ambientacion, Sonido Standar (no para artista) y Tecnico, DJ // Animacion, Fotografo y Resumen de fotos, Filmaker, Confetti",110000,total_grupo
-LANZAMIENTOS,Varios ,Fondo de decoracion Personalizado ,,20000,escalonado
+LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTOS PRIMIUM,"Incluye: Instalación de 1 Cuadro de Truss, Banner Impreso Grande para el Cuadro de Truss, Tarima para destacar tu evento, Stand para Fotos de Selfies, Cobertura Fotográfica Profesional y Drone, DJ para animar y ambientar tu evento, Máquina de Confetti para un toque mágico, Sistema de Luces para horario nocturno, Equipo de Sonido Profesional(no para artistas o bandas): 
+1 Consola de Sonido Yamaha 3 Bocinas para Voz y Sonido Marca Mackie Thump 2 Bocinas para Bajo Mackie Thump 1 Micrófono Alámbrico 1 Micrófono Inalámbrico, 1 Máquina de Humo para un ambiente único, Instalación y montaje incluidos, Transporte de los equipos.
+",130000,total_grupo
+LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO,"Incluye: Lanzamiento Temático, Tú decides el tema que te apasiona y nosotros lo convertimos en una experiencia única, Diseño de la Experiencia:Reunión con nuestro equipo de promoción. Propuestas de diseño alineadas a tu visión, Creación de Espacios Temáticos, Estructura de Truss dividida en tres zonas, Uso de materiales reciclados según el tema, Impresión de coroplast para espacios temáticos, Áreas dedicadas para selfies, Cuadros en truss en cada zona, Iluminación de colores en todos los espacios, Animación con DJ o Sonidista profesional, Sistema de sonido de alta calidad (no para artistas o bandas): (no para artistas o bandas) 1 Consola de Sonido Yamaha 3 Bocinas para Voz y Sonido Marca Mackie Thump 2 Bocinas para Bajo Mackie Thump 1 Micrófono Alámbrico 1 Micrófono Inalámbrico, Efectos especiales: máquina de humo y confeti, Fuegos Artificiales, Equipo de fotografía y video, Resumen fotográfico de los momentos especiales, Carpeta en nuestra página web para descargar fotos.",160000,total_grupo
+LANZAMIENTOS,LANZAMIENTOS,LANZAMIENTO TEMATICO (lista),"Incluye: Lanzamiento Temático de Lista, Tú decides el tema que te apasiona en nuestro listado, Nosotros lo convertimos en una experiencia única, Diseño de la Experiencia:Reunión con nuestro equipo de promoción. Propuestas de diseño alineadas a tu visión, Creación de Espacios Temáticos, Estructura de Truss dividida en tres zonas, Uso de materiales reciclados según el tema, Impresión de coroplast para espacios temáticos, Áreas dedicadas para selfies, Cuadros en truss en cada zona, Iluminación de colores en todos los espacios, Animación con DJ o Sonidista profesional, Sistema de sonido de alta calidad: (no para artistas o bandas) 1 Consola de Sonido Yamaha 3 Bocinas para Voz y Sonido Marca Mackie Thump 2 Bocinas para Bajo Mackie Thump 1 Micrófono Alámbrico 1 Micrófono Inalámbrico, Efectos especiales: máquina de humo y confeti, Fuegos Artificiales, Equipo de fotografía y video, Resumen fotográfico de los momentos especiales, Carpeta en nuestra página web para descargar fotos, Presentamos algunas ideas listas para su lanzamiento:, Clásicos de High School: Los 50' Los 70' Los 80' Los 90' Los 2000 Misterio, Investigación y Acción: Detective, FBI, Investigador Privado, Viejo Oeste, Piratas Marineros, Hombres de Negros (MIB), Velocidad, Autos y Competencia
+Racing, Fórmula Uno, Drive & Dinner, Deportes: Fútbol, Béisbol, Música y Entretenimiento: Festival Musical, Festival Tropical, Broadway, Hollywood, Premiaciones, Culturas y Mundos Temáticos: Templo Chino, Alicia en el País de las Maravillas (Wonderland), Grecia, Mitologia Griega y Atena, Galaxia, Astronauta, Estrellas, Urbano y Estilo de Vida: Urbano, Born in the Bronx
+",110000,total_grupo
+LANZAMIENTOS,Varios,Fondo de decoracion Personalizado ,,20000,escalonado
 LANZAMIENTOS,Varios,Cuadro en Truss,Incluye Banner personalizado,10000,escalonado
 LANZAMIENTOS,Varios,Tarima,16x16 - 16x20 - 20x20,20000,escalonado
 LANZAMIENTOS,Varios,Techo,16x16 - 16x20 - 20x20,30000,escalonado
@@ -80,26 +84,26 @@ INVESTIDURA,Investidura Bachiller,Realizacion del Evento,"Incluye:Toga, birrete,
 INVESTIDURA,Investidura,Investidura Centros PREPARAS,"Incluye:1 Fotografía individual de graduado tamaño 10x13 enmarcada con cañuela de primera, 1 Fotografía de padrinos tamaño 5x7, 1 Fotografía familiar tamaño 5x7, 1 Fotografía de gala, 1 Fotografía tamaño 2x2,Fotografías cargadas a la web, Toga, birrete, esclavina y borla de primera calidad para cada estudiante, Instalación de un stand personalizado en la entrada del salón para fotografías y selfies de bienvenida, Colación de grados: entrega de pergaminos durante el desfile, Medallas, Pergaminos enmarcados y sin enmarcar, Placa a la máxima excelencia académica, Placa de reconocimiento a docente, Ambientación del salón, Coordinación y creación del programa, con manejo logístico integral, Instalación y manejo de sistema de sonido profesional, Cobertura fotográfica de todo el evento, Maestría de ceremonia, Instalación de mesa directiva y mesas adjuntas con Membretes, post-it, lapiceros, arreglos florales, Video de vivencias de los estudiantes, Video TBT, Personal de protocolo y staff de ejecución, Anuario para la Dirección.",2100,por_estudiante
 INVESTIDURA,Pequenines,Investidura Para Basicas,"Incluye:1 Fotografía individual de graduado tamaño 08x10 enmarcada, 1 Fotografía familiar tamaño 5x7, 2 Llaveros,Fotografías cargadas a la web, Toga, birrete, esclavina y borla de primera calidad para cada estudiante, Instalación de un stand personalizado en la entrada del salón para fotografías y selfies de bienvenida, Colación de grados: entrega de pergaminos durante el desfile, Medallas, Pergaminos enmarcados y sin enmarcar, Ambientación del salón, Coordinación y creación del programa, con manejo logístico integral, Instalación y manejo de sistema de sonido profesional, Cobertura fotográfica de todo el evento, Maestría de ceremonia, Instalación de mesa directiva y mesas adjuntas con Membretes, post-it, lapiceros, arreglos florales, Personal de protocolo y staff de ejecución, Coctel y Palomitas.",2000,por_estudiante
 INVESTIDURA,Pequenines,Investidura Para Basicas Primiun,"Incluye:1 Fotografía individual de graduado tamaño 08x10 enmarcada, 1 Fotografía familiar tamaño 5x7, 2 Llaveros,Fotografías cargadas a la web, Toga, birrete, esclavina y borla de primera calidad para cada estudiante, Instalación de un stand personalizado en la entrada del salón para fotografías y selfies de bienvenida, Colación de grados: entrega de pergaminos durante el desfile, Medallas, Pergaminos enmarcados y sin enmarcar, Ambientación del salón, Coordinación y creación del programa, con manejo logístico integral, Instalación y manejo de sistema de sonido profesional, Cobertura fotográfica de todo el evento, Maestría de ceremonia, Instalación de mesa directiva y mesas adjuntas con Membretes, post-it, lapiceros, arreglos florales, Personal de protocolo y staff de ejecución, Coctel y Palomitas.",2500,por_estudiante
-INVESTIDURA,Pequenines,Recuerdo Escolar,"Incluye:1 Fotografía enmarcada 8x10, 1 Fotografía tamaño 5x7 en portaretrato, 9 fotos tipos cartera, Fotografías cargadas a la web,",900,por_estudiante
+INVESTIDURA,Pequenines,Recuerdo Escolar,"Incluye:1 Fotografía enmarcada 8x10, 1 Fotografía tamaño 5x7 en portaretrato, 9 fotos tipos cartera, Fotografías cargadas a la web,",780,por_estudiante
 INVESTIDURA,Pequenines,COMBO NAVIDAD,"Incluye: Ambientacion del espacio de trabajo, Fotografo y Staff, 1 Fotografía familiar tamaño 08x10 enmarcada, 1 Taza Sublimada con foto familiar, 2 Llaveros con foto familiar,Fotografías digitales",900,por_estudiante
-INVESTIDURA,Pequenines,COMBO NAVIDAD Y RECUERDO ESCOLAR,"Incluye: COMBO NAVIDAD: Ambientacion del espacio de trabajo, Fotografo y Staff, 1 Fotografía familiar tamaño 08x10 enmarcada, 1 Taza Sublimada con foto familiar, 2 Llaveros con foto familiar,Fotografías digitales, RECUERDO ESCOLAR: Incluye:1 Fotografía enmarcada 8x10, 1 Fotografía tamaño 5x7 en portaretrato, 9 fotos tipos cartera, Fotografías cargadas a la web,",1600,por_estudiante
-INVESTIDURA,Salones,Issffaa,Capacidad Aproximada 500,50000,total_grupo
-INVESTIDURA,Salones,Auditorio UNPHU,Capacidad Aproximada 400,100000,total_grupo
-INVESTIDURA,Salones,Coopnama (u otro mismo rango),Capacidad Aproximada 350,30000,total_grupo
-INVESTIDURA,Salones,Salon Aida Porta Latin,Capacidad Aproximada 100,25000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (5:00pm),Capacidad Aproximada 400,120000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (1:00pm),Capacidad Aproximada 400,90000,total_grupo
-INVESTIDURA,Salones,Auditorio Biblioteca Nacional (9:00am),Capacidad Aproximada 400,60000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (5:00pm),Capacidad Aproximada 900,130000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (1:00pm),Capacidad Aproximada 900,90000,total_grupo
-INVESTIDURA,Salones,Auditorio La Fama (9:00am),Capacidad Aproximada 900,60000,total_grupo
-INVESTIDURA,Salones,Auditorio Casa San Pablo,Capacidad Aproximada 1100,140000,total_grupo
-INVESTIDURA,Salones,Salon Sambil,Capacidad Aproximada 1300,295000,total_grupo
+INVESTIDURA,Pequenines,COMBO NAVIDAD Y RECUERDO ESCOLAR,"Incluye: COMBO NAVIDAD: Ambientacion del espacio de trabajo, Fotografo y Staff, 1 Fotografía familiar tamaño 08x10 enmarcada, 1 Taza Sublimada con foto familiar, 2 Llaveros con foto familiar,Fotografías digitales, RECUERDO ESCOLAR: Incluye:1 Fotografía enmarcada 8x10, 1 Fotografía tamaño 5x7 en portaretrato, 9 fotos tipos cartera, Fotografías cargadas a la web,",1480,por_estudiante
+INVESTIDURA,Salones,Issffaa(500),Capacidad Aproximada 500,50000,total_grupo
+INVESTIDURA,Salones,Auditorio UNPHU(400),Capacidad Aproximada 400,100000,total_grupo
+INVESTIDURA,Salones,Coopnama(350) (u otro mismo rango),Capacidad Aproximada 350,30000,total_grupo
+INVESTIDURA,Salones,Salon Aida Porta Latin(100),Capacidad Aproximada 100,25000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (5:00pm),Capacidad Aproximada 400,80000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (1:00pm),Capacidad Aproximada 400,60000,total_grupo
+INVESTIDURA,Salones,Auditorio Biblioteca Nacional(400) (9:00am),Capacidad Aproximada 400,40000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (5:00pm),Capacidad Aproximada 900,130000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (1:00pm),Capacidad Aproximada 900,90000,total_grupo
+INVESTIDURA,Salones,Auditorio La Fama(900) (9:00am),Capacidad Aproximada 900,60000,total_grupo
+INVESTIDURA,Salones,Auditorio Casa San Pablo(1100),Capacidad Aproximada 1100,120000,total_grupo
+INVESTIDURA,Salones,Salon Sambil(1300),Capacidad Aproximada 1300,295000,total_grupo
 INVESTIDURA,Salones,Hotel Catalonia Ibizza 2do Nivel,,400000,total_grupo
-INVESTIDURA,Salones,Salon Restauracion MIDE,Capacidad Aproximada 500,200000,total_grupo
-INVESTIDURA,Salones,Salon Independencia MIDE,Capacidad Aproximada 1500,350000,total_grupo
-INVESTIDURA,Salones,En el Centro con Facilidades,,40000,total_grupo
-INVESTIDURA,Salones,En el Centro sin Facilidades,,50000,total_grupo
+INVESTIDURA,Salones,Salon Restauracion MIDE(500),Capacidad Aproximada 500,200000,total_grupo
+INVESTIDURA,Salones,Salon Independencia MIDE(1500),Capacidad Aproximada 1500,350000,total_grupo
+INVESTIDURA,Salones,En el Centro con Facilidades,,50000,total_grupo
+INVESTIDURA,Salones,En el Centro sin Facilidades,,60000,total_grupo
 INVESTIDURA,Varios,Stand Personalizado,,20000,escalonado
 INVESTIDURA,Varios,Plataforma 360,,10000,escalonado
 INVESTIDURA,Varios,Esclavina Sublimada,,175,por_estudiante
@@ -115,4 +119,8 @@ INVESTIDURA,Varios,Solo Sesion de Pregraduacion,"Incluye:1 Fotografía individua
 PROMOCIONALES,Polos,Polos Algodon Sublimado con logo bordado,,690,por_estudiante
 INVESTIDURA,Pequenines,Fotos Estilo Graduacion,"Incluye:1 fotografía individual del graduado tamaño 8x10 enmarcada, 1 fotografía familiar tamaño 5x7, 2 llaveros, Fotos digitales cargadas a la web, Kit togas Calidad 1A,",900,por_estudiante
 PROMOCIONALES,Varios,Bordado Extra Espalda,,200,por_estudiante
-
+INVESTIDURA,Salones,Auditorio PN(400),Capacidad Aproximada 400,90000,total_grupo
+INVESTIDURA,Salones,Auditorio Dominico Americano(350),Capacidad Aproximada 400,95000,total_grupo
+PROMOCIONALES,Otros,Accesorio de Cuello, Corbata o Corbatin,115,por_estudiante
+PROMOCIONALES,Combo,Combo Chaleco,"Incluye: Chaleco, pantalon, camisa, corbata",2200,por_estudiante
+PROMOCIONALES,Gratuidades,Toallitas Bordadas Gratis,,130,por_estudiante
